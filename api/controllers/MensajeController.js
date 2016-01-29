@@ -8,7 +8,7 @@
 module.exports = {
 	suscribirseOPublicar: function(req, res) {
 
-    console.log('Entro a la función del Controlador Chat');
+    console.log('Entro a la función del Controlador Mensaje');
     //guardamos los parámetros en una variable
     var parametros = req.params.all();
     //Vamos a hacer una comparación, si es que la petición es con webssockets y es un método post creamos y publicamos el Chat
@@ -46,5 +46,5 @@ module.exports = {
       //Si no se suscribe ni se crea un chat, entonces desplegar en consola que es un bad request.
       console.log('Bad Request');
     }
-  }	
+  }
 };
