@@ -8,7 +8,14 @@
 module.exports = {
 
   attributes: {
-
+    Url: {
+      type: 'string'
+    },
+    fechaDeCreacion: {
+      type: 'date'
+    },
+    idUsuario: {
+      model: 'Usuario'
+    }
   }
 };
-

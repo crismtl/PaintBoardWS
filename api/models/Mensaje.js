@@ -10,6 +10,13 @@ module.exports = {
   attributes: {
     texto: {
       type: 'string'
+    },
+    fechaDeEnvio: {
+      type: 'date'
+    },
+
+    idUsuario: {
+      model: 'Usuario'
     }
   }
 };

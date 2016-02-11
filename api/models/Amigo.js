@@ -8,7 +8,12 @@
 module.exports = {
 
   attributes: {
+    idAmigo: {
+      type: 'integer'
+    },
+    idUsuario: {
+      model: 'Usuario'
+    }
 
   }
 };
-

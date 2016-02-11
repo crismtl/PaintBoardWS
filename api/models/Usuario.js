@@ -22,6 +22,19 @@ module.exports = {
   	},
   	password: {
   		type: 'string'
-  	}
+  	},
+    mensajes: {
+      collection: 'Mensaje',
+      via: 'idUsuario'
+    },
+    imagenes: {
+      collection: 'Imagen',
+      via: 'idUsuario'
+    },
+    amigos: {
+      collection: 'Amigo',
+      via: 'idUsuario'
+    }
+
   }
 };
