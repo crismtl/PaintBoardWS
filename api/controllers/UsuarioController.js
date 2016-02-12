@@ -6,6 +6,23 @@
  */
 
 module.exports = {
-	
-};
+    login: function(req, res) {
+        var parametros = req.allParams();
 
+        Usuario.findOne({
+            email: parametros.email
+        }).exec(function(err, usuario) {
+
+            if (err) console.log(err);
+
+            if (parametros.password != usuario.password) {
+                return res.badRequest({
+                    error: 'Password Incorrecto'
+                });
+            } else {
+                delete usuario.password;
+                return res.ok(usuario);
+            }
+        });
+    }
+};
