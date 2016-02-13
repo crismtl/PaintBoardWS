@@ -8,6 +8,7 @@
 module.exports = {
     login: function(req, res) {
         var parametros = req.allParams();
+        console.log(parametros);
 
         Usuario.findOne({
             email: parametros.email
