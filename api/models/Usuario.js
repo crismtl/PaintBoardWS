@@ -31,6 +31,10 @@ module.exports = {
       collection: 'Imagen',
       via: 'idUsuario'
     },
+    canvas: {
+      collection: 'Canvas',
+      via: 'idUsuario'
+    },
     amigos: {
       collection: 'Amigo',
       via: 'idUsuario'
