@@ -22,23 +22,13 @@ module.exports = {
       }).exec(function(err, nuevoMensaje) {
         if (err) console.log(err);
 
-        /*Usuario.findOne({
-            id: nuevoMensaje.idUsuario
-        }).exec(function(err, usuario) {
-
-            if (err) console.log(err);
-            nombre = usuario.nombre+usuario.apellido;
-
-        });*/
-
         console.log('se creo el mensaje del chat: ', nuevoMensaje);
 
-        /*Mensaje.publishCreate({
+        Mensaje.publishCreate({
           texto: nuevoMensaje.texto,
           fechaDeEnvio: nuevoMensaje.fechaDeEnvio,
-          idUsuario: nuevoMensaje.idUsuario,
-          nombreCompletoDeUsuario: nombre
-        });*/
+          idUsuario: nuevoMensaje.idUsuario
+        });
       });
     } else if (req.isSocket) {
       Mensaje.watch(req.socket);

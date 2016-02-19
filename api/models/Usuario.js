@@ -23,6 +23,10 @@ module.exports = {
   	password: {
   		type: 'string'
   	},
+    foto:{
+      type:'text',
+      defaultsTo: 'http://icon-icons.com/icons2/217/PNG/512/user-orange_25327.png'
+            },
     mensajes: {
       collection: 'Mensaje',
       via: 'idUsuario'
